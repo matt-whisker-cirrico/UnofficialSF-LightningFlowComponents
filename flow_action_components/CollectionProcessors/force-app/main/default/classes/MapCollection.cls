@@ -60,7 +60,9 @@ global with sharing class MapCollection {
     }
 
     private static void putType(SObject obj, String fieldName, String fieldType, String fieldValue) {
-        System.debug('fieldName, fieldType, fieldValue: '+fieldName+', '+fieldType+', '+fieldValue);
+
+        // System.debug('fieldName, fieldType, fieldValue: '+fieldName+', '+fieldType+', '+fieldValue);
+
         if (fieldType != 'Boolean' && (fieldValue == null || fieldValue == '')) {
             obj.put(fieldName, null);
         } else if (fieldType == 'Date') {
